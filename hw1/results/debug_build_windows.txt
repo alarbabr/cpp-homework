@@ -1,0 +1,46 @@
+Change Dir: '<repo>/build-debug'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" hw1_tests.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+Версия MSBuild 18.10.1-1.26427.6+3cd27c13e для .NET Framework
+Сборка начата 10.10.2026 1:34:09.
+
+Проект "<repo>\build-debug\hw1_tests.vcxproj" в узле 1 (целевые объекты по умолчанию).
+Проект "<repo>\build-debug\hw1_tests.vcxproj" (1) выполняет сборку "<repo>\build-debug\ZERO_CHECK.vcxproj" (2) в узле 1 (целевые объекты по умолчанию).
+PrepareForBuild:
+  Создание каталога "x64\Debug\ZERO_CHECK\".
+  Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+  Создание каталога "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\".
+InitializeBuildStatus:
+  Создание "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+  Обращение к "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+CustomBuild:
+  1>Checking Build System
+FinalizeBuildStatus:
+  Файл "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" удаляется.
+  Обращение к "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Сборка проекта "<repo>\build-debug\ZERO_CHECK.vcxproj" завершена (целевые объекты по умолчанию).
+PrepareForBuild:
+  Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+  Создание каталога "<repo>\build-debug\Debug\".
+  Создание каталога "hw1_tests.dir\Debug\hw1_tests.tlog\".
+InitializeBuildStatus:
+  Создание "hw1_tests.dir\Debug\hw1_tests.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+  Обращение к "hw1_tests.dir\Debug\hw1_tests.tlog\unsuccessfulbuild".
+CustomBuild:
+  Building Custom Rule <repo>/hw1/CMakeLists.txt
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"<repo>\hw1" /Zi /nologo /W4 /WX- /diagnostics:column /fsanitize=address /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HW1_ASAN_ENABLED=1 /D "CMAKE_INTDIR=\"Debug\"" /EHsc /MDd /std:c++17 /Fo"hw1_tests.dir\Debug\\" /Fd"hw1_tests.dir\Debug\vc145.pdb" /external:W4 /TP /errorReport:queue  /utf-8 /fsanitize=address "<repo>\hw1\tests\main.cpp"
+  main.cpp
+Link:
+  C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"<repo>\build-debug\Debug\hw1_tests.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"<repo>/build-debug/Debug/hw1_tests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"<repo>/build-debug/Debug/hw1_tests.lib" /MACHINE:X64  /machine:x64 hw1_tests.dir\Debug\main.obj
+  hw1_tests.vcxproj -> <repo>\build-debug\Debug\hw1_tests.exe
+FinalizeBuildStatus:
+  Файл "hw1_tests.dir\Debug\hw1_tests.tlog\unsuccessfulbuild" удаляется.
+  Обращение к "hw1_tests.dir\Debug\hw1_tests.tlog\hw1_tests.lastbuildstate".
+Сборка проекта "<repo>\build-debug\hw1_tests.vcxproj" завершена (целевые объекты по умолчанию).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:01.40

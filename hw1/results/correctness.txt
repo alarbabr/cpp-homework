@@ -1,0 +1,53 @@
+Environment: ASAN_OPTIONS=detect_leaks=0 (LeakSanitizer cannot inspect tasks in this container)
+UpdateCTestConfiguration  from :/workspace/scratch/4da882931cda/cpp_homework/build-debug/DartConfiguration.tcl
+Test project /workspace/scratch/4da882931cda/cpp_homework/build-debug
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: hw1_correctness
+
+1: Test command: /workspace/scratch/4da882931cda/cpp_homework/build-debug/hw1_tests
+1: Working Directory: /workspace/scratch/4da882931cda/cpp_homework/build-debug
+1: Test timeout computed to be: 10000000
+1: [PASS] int/empty (n=0)
+1: [PASS] int/single (n=1)
+1: [PASS] int/sorted (n=5)
+1: [PASS] int/reverse (n=5)
+1: [PASS] int/equal (n=20)
+1: [PASS] int/negative (n=5)
+1: [PASS] int/duplicates (n=6)
+1: [PASS] int/extremes (n=3)
+1: [PASS] int/descending (n=5)
+1: [PASS] int/random/seed=12345 (n=10)
+1: [PASS] int/random/seed=12345 (n=1000)
+1: [PASS] int/random/seed=12345 (n=100000)
+1: [PASS] int/random/seed=20261010 (n=10)
+1: [PASS] int/random/seed=20261010 (n=1000)
+1: [PASS] int/random/seed=20261010 (n=100000)
+1: [PASS] int/default-comparator
+1: [PASS] int/raw-array
+1: [PASS] int/subrange/outside-elements-unchanged
+1: [PASS] Point/empty (n=0)
+1: [PASS] Point/single (n=1)
+1: [PASS] Point/sorted (n=4)
+1: [PASS] Point/reverse (n=4)
+1: [PASS] Point/equal (n=20)
+1: [PASS] Point/duplicates (n=5)
+1: [PASS] Point/equal-distance (n=4)
+1: [PASS] Point/negative-coordinates (n=4)
+1: [PASS] Point/random/seed=12345 (n=10)
+1: [PASS] Point/random/seed=12345 (n=1000)
+1: [PASS] Point/random/seed=12345 (n=100000)
+1: [PASS] Point/random/seed=20261010 (n=10)
+1: [PASS] Point/random/seed=20261010 (n=1000)
+1: [PASS] Point/random/seed=20261010 (n=100000)
+1: All 32 correctness tests passed.
+1/1 Test #1: hw1_correctness ..................   Passed    5.34 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   5.34 sec
