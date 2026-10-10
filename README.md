@@ -5,6 +5,5 @@
 Основная инструкция: [hw1/README.md](hw1/README.md).
 Подготовка к защите: [hw1/DEFENSE.md](hw1/DEFENSE.md).
 Результаты проверок на Windows/MSVC: [hw1/results/WINDOWS_RUN_REPORT.md](hw1/results/WINDOWS_RUN_REPORT.md). Предыдущий запуск на Linux описан в [hw1/results/RUN_REPORT.md](hw1/results/RUN_REPORT.md).
-Участие AI: [hw1/AI_CONTRIBUTIONS.md](hw1/AI_CONTRIBUTIONS.md).
 
 Исходный архив содержал только `hw1/`; материалов для `hw2/` в нём не было. Вклад AI описан в `hw1/AI_CONTRIBUTIONS.md` и в сообщении коммита с загрузкой задания.
