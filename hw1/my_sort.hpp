@@ -6,6 +6,16 @@
 #include <iterator>
 #include <vector>
 
+struct Point {
+    double x, y;
+};
+
+inline bool byDistance(const Point& a, const Point& b) {
+    double d1 = a.x * a.x + a.y * a.y;
+    double d2 = b.x * b.x + b.y * b.y;
+    return d1 < d2;
+}
+
 // Слияние двух частей, уже отсортированных с тем же компаратором.
 template <typename T, typename Compare>
 std::vector<T> mergeParts(const std::vector<T>& left,

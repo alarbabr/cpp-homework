@@ -1,5 +1,4 @@
 #include "my_sort.hpp"
-#include "point.hpp"
 
 #include <climits>
 #include <exception>
