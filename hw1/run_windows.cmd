@@ -14,9 +14,9 @@ if errorlevel 1 exit /b 1
 cmake --build build-release --config Release --target hw1_bench
 if errorlevel 1 exit /b 1
 if exist build-release\Release\hw1_bench.exe (
-    build-release\Release\hw1_bench.exe hw1\results\bench_windows.csv
+    build-release\Release\hw1_bench.exe hw1\bench\results.csv
 ) else (
-    build-release\hw1_bench.exe hw1\results\bench_windows.csv
+    build-release\hw1_bench.exe hw1\bench\results.csv
 )
 if errorlevel 1 exit /b 1
 echo Both runs completed successfully.
