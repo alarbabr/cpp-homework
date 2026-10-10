@@ -1,5 +1,6 @@
 @echo off
 setlocal
+chcp 65001 >nul
 cd /d "%~dp0.."
 
 cmake -S hw1 -B build-debug -DHW1_BUILD_TESTS=ON -DHW1_BUILD_BENCH=OFF -DCMAKE_BUILD_TYPE=Debug

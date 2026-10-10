@@ -3,6 +3,7 @@
 #include <climits>
 #include <exception>
 #include <iostream>
+#include <limits>
 #include <random>
 #include <stdexcept>
 #include <string>
@@ -15,6 +16,33 @@
 #endif
 
 int passed = 0;
+
+void printValue(int value) {
+    std::cout << value;
+}
+
+void printValue(const Point& point) {
+    const auto previousPrecision = std::cout.precision(std::numeric_limits<double>::max_digits10);
+    std::cout << '(' << point.x << ", " << point.y << ')';
+    std::cout.precision(previousPrecision);
+}
+
+template <typename T>
+void printInput(const std::string& name, const std::vector<T>& input) {
+    std::cout << "[ВХОД] " << name << " (n=" << input.size() << "): [";
+    for (std::size_t i = 0; i < input.size(); i++) {
+        if (i != 0) {
+            std::cout << ", ";
+        }
+        // Маленькие входы показываем целиком, большие — первые и последние пять элементов.
+        if (input.size() > 20 && i == 5) {
+            std::cout << "... (пропущено " << input.size() - 10 << " элементов) ..., ";
+            i = input.size() - 5;
+        }
+        printValue(input[i]);
+    }
+    std::cout << ']' << std::endl;
+}
 
 void require(bool condition, const std::string& message) {
     if (!condition) {
@@ -50,6 +78,7 @@ bool sameElements(std::vector<Point> a, std::vector<Point> b) {
 
 template <typename T, typename Compare>
 void runCase(const std::string& name, const std::vector<T>& input, Compare comp) {
+    printInput(name, input);
     std::vector<T> actual = input;
     mySort(actual.begin(), actual.end(), comp);
     require(std::is_sorted(actual.begin(), actual.end(), comp), name + ": wrong order");
@@ -84,6 +113,7 @@ void testInts() {
 
     std::vector<int> data = {7, 2, 5, 1, 9};
     std::vector<int> original = data;
+    printInput("int/default-comparator", data);
     mySort(data.begin(), data.end());
     require(std::is_sorted(data.begin(), data.end()), "default comparator: order");
     require(sameElements(original, data), "default comparator: permutation");
@@ -91,6 +121,7 @@ void testInts() {
     std::cout << "[PASS] int/default-comparator\n";
 
     int array[] = {7, 2, 5, 1, 9};
+    printInput("int/raw-array", std::vector<int>(std::begin(array), std::end(array)));
     mySort(std::begin(array), std::end(array));
     require(std::is_sorted(std::begin(array), std::end(array)), "int[]: order");
     require(sameElements(std::vector<int>{7, 2, 5, 1, 9},
@@ -100,6 +131,7 @@ void testInts() {
     std::cout << "[PASS] int/raw-array\n";
 
     std::vector<int> subrange = {100, 7, 2, 5, 1, 9, -100};
+    printInput("int/subrange (сортируются индексы 1..5)", subrange);
     mySort(subrange.begin() + 1, subrange.end() - 1);
     require((subrange == std::vector<int>{100, 1, 2, 5, 7, 9, -100}), "subrange");
     passed++;
