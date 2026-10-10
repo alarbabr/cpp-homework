@@ -4,8 +4,16 @@ cd /d "%~dp0.."
 
 cmake -S hw1 -B build-debug -DHW1_BUILD_TESTS=ON -DHW1_BUILD_BENCH=OFF -DCMAKE_BUILD_TYPE=Debug
 if errorlevel 1 exit /b 1
-cmake --build build-debug --config Debug --target hw1_tests
+cmake --build build-debug --config Debug --target hw1_demo hw1_tests
 if errorlevel 1 exit /b 1
+echo Original demonstration:
+if exist build-debug\Debug\hw1_demo.exe (
+    build-debug\Debug\hw1_demo.exe
+) else (
+    build-debug\hw1_demo.exe
+)
+if errorlevel 1 exit /b 1
+
 ctest --test-dir build-debug -C Debug -V --output-on-failure
 if errorlevel 1 exit /b 1
 

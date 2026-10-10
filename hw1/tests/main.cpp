@@ -1,4 +1,4 @@
-#include "my_sort.hpp"
+#include "../main.cpp"
 
 #include <climits>
 #include <exception>
